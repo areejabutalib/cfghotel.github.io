@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CFG Hotel</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container menu-toggler">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="./images/CFGHotel2.png" alt="">
+        </a>
+        <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link"> Home </a>
+            </li>
+            <li class="nav-item">
+              <a href="#rooms" class="nav-link">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a href="#fitness" class="nav-link">Spa & Fitness</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<main>
+    <div class="hero">
+      <div class="container">
+        <div class="main-heading">
+          <h1 class="title" data-aos="fade-right" data-aos-delay="300" data-aos-once="true"> Relax and Retreat At</h1>
+          <h2 class="subtitle" data-aos="fade-right" data-aos-delay="350" data-aos-once="true"> Our Luxury Hotel </h2>
+        </div>
+        <a href="#" class="btn btn-gradient"> Discover more
+          <span class="dots"></span>
+        </a>
+      </div>
+    </div>
+
+ <!-- Booking -->
+
+   <section class="booking">
+      <div class="grid-container container book-form">
+         <form action="" class="form align-items-start justify-content-start flex-column d-flex">
+            <div class="input-group">
+               <label for="destination" class="input-label"> Destination</label>
+               <input type="text" class="input" id="destination" required ="required">
+            </div>
+            <div class="input-group">
+               <label for="check-in" class="input-label"> Check-In</label>
+               <input type="date" class="input" id="check-in" placeholder= "YYYY-MM-DD" required ="required">
+            </div>
+            <div class="input-group">
+               <label for="check-out" class="input-label"> Check-Out</label>
+               <input type="date" class="input" id="check-out" placeholder= "YYYY-MM-DD" required ="required">
+            </div>
+            <div class="input-group">
+               <label for="adults" class="input-label"> Adults</label>
+               <select id="adults" class="options">
+                   <option value="0"> 0 </option>
+                   <option value="1"> 1 </option>
+                   <option value="2"> 2 </option>
+                   <option value="3"> 3 </option>
+                   <option value="4"> 4 </option>
+                   <option value="5"> 5 </option>
+               </select>
+            </div>
+            <div class="input-group">
+               <label for="children" class="input-label"> Children </label>
+               <select id="children" class="options">
+                   <option value="0"> 0 </option>
+                   <option value="1"> 1 </option>
+                   <option value="2"> 2 </option>
+                   <option value="3"> 3 </option>
+                   <option value="4"> 4 </option>
+                   <option value="5"> 5 </option>
+               </select>
+            </div>
+            <button type="submit" class="btn form-btn btn-blue"> Book Now 
+               <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+            </button>
+         </form>
+      </div>
+   </section>   
+
+<!-- Rooms -->
+
+ <section class="rooms">
+    <a id="rooms"></a>
+    <div class="container">
+        <h5 class="section-head">
+          <span class="heading"> Explore</span>
+          <span class="sub-head"> Our Luxurious Suites</span>
+        </h5>
+      
+        <div class="grid">
+          <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-delay="350" data-aos-once="true">
+            <img src="./images/Room1.jpg" alt="" class="room-image">
+              <h5 class="room-name"> Ensuite Room </h5>
+              <span class="room-price">From £100/night </span>
+            <div class="room-rating rating-color">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+              <a href="#" class="btn btn-gradient"> Book Now
+                <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+              </a>
+          </div>
+        
+      
+            <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-delay="400" data-aos-once="true">
+                <img src="./images/Room3.jpg" alt="" class="room-image">
+                <h5 class="room-name"> Silver Deluxe Room </h5>
+                <span class="room-price">From £110/night </span>
+                <div class="room-rating rating-color">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half rating"></i>
+                </div>
+                <a href="#" class="btn btn-gradient"> Book Now
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+    
+            <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-delay="420" data-aos-once="true">
+                <img src="./images/Room2.jpg" alt="" class="room-image">
+                <h5 class="room-name"> Golden Deluxe Room </h5>
+                <span class="room-price">From £150/night </span>
+                <div class="room-rating rating-color">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <a href="#" class="btn btn-gradient"> Book Now
+                    <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                </a>
+            </div>
+    
+            <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-delay="450" data-aos-once="true">
+                 <img src="./images/Room4.jpg" alt="" class="room-image">
+                 <h5 class="room-name"> Platinum Room </h5>
+                 <span class="room-price">From £200/night </span>
+                 <div class="room-rating rating-color">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                 </div>
+                 <a href="#" class="btn btn-gradient"> Book Now
+                     <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                 </a>
+            </div>
+
+            <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-delay="490" data-aos-once="true">
+              <img src="./images/Room5.jpg" alt="" class="room-image">
+              <h5 class="room-name"> Double Deluxe Room </h5>
+              <span class="room-price">From £250/night </span>
+              <div class="room-rating rating-color">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+              </div>
+              <a href="#" class="btn btn-gradient"> Book Now
+                  <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+              </a>
+            </div>
+
+            <div class="grid-item featured-rooms" data-aos="fade-down" data-aos-delay="600" data-aos-once="true">
+                 <img src="./images/Room6.jpg" alt="" class="room-image">
+                 <h5 class="room-name"> Private Deluxe Room </h5>
+                 <span class="room-price">From £300/night </span>
+                 <div class="room-rating rating-color">
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                     <i class="fas fa-star"></i>
+                 </div>
+                 <a href="#" class="btn btn-gradient"> Book Now
+                     <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+                 </a>
+            </div>
+        </div>
+    </div>
+ </section>
+
+ <!-- Offers -->
+
+ <section class="offer">
+    <div class="container">
+      <div class="offer-content">
+        <div class="discount">
+          40% off
+        </div>
+        <h5 class="room3"> Golden Deluxe Suite</h5>
+        <div class="room-rating rating-color">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="paragraph">
+          Book now and get a special offer for 40% off!
+        </p>
+        <a href="#" class="btn btn-gradient"> Redeem Here!
+          <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+          </a>
+      </div>
+    </div>
+  </section>
+
+ <!-- Spa & Fitness -->
+
+ <section class="fitness">
+  <a id="fitness"></a>
+  <div class="container">
+    <h5 class="section-head">
+      <span class="heading">Spa & Fitness</span>
+      <span class="sub-head"> Relax & Re-energize </span>
+    </h5>
+    <div class="grid rooms-grid">
+      <div class="grid-item feature-rooms">
+        <div class="image-wrap">
+          <img class="spa-image" src="./images/Spa.jpg" alt="">
+          <h5 class="spa-name"></h5>
+        </div>
+        <div class="room-info-wrap">
+          <p class="paragraph">Swing by for a relaxing, cleansing, and energizing time at our luxury Spa & Fitness Center.</p>
+          <a href="#" class="btn rooms-btn"> Find out more &rarr;</a>
+        </div>
+      </div>
+
+      <div class="grid-item feature-rooms">
+        <div class="image-wrap">
+          <img class="spa-image" src="./images/Pool1.jpg" alt="">
+          <h5 class="spa-name"></h5>
+        </div>
+        <div class="room-info-wrap">
+          <p class="paragraph"> Bask in the ambiance at our outdoor pool and relax with a refreshing drink or a bite to eat under the palm trees of our private beach. </p>
+          <a href="#" class="btn rooms-btn"> Find out more &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>      
+  
+
+<!-- Contact -->
+<section class="contact">
+  <div class="container">
+    <h5 class="section-head">
+      <span class="heading">Contact Us</span>
+      <span class="sub-head">Get in Touch</span>
+    </h5>
+    <div class="contact-content">
+      <form action="" class="form contact-form">
+        
+        <div class="input-group-wrap">
+          <div class="input-group">
+            <input type="text" class="input" placeholder="Name">
+            <span class="bar"></span>
+          </div>
+
+          <div class="input-group">
+            <input type="email" class="input" placeholder="E-mail">
+            <span class="bar"></span>
+          </div>
+
+          <div class="input-group">
+            <input type="text" class="input" placeholder="Subject">
+            <span class="bar"></span>
+          </div>
+
+          <div class="input-group">
+            <textarea class="input" cols="30" rows="8" placeholder="Query"></textarea>
+            <span class="bar"></span>
+          </div>
+
+          <button type="submit" class="btn form-btn btn-blue"> Send message 
+            <span class="dots"><i class="fas fa-ellipsis-h"></i></span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+</main>
+
+  <!-- Footer -->
+
+  <footer class="footer">
+    <a id="contact"></a>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-content-brand">
+          <a href="index.html" class="logo">
+            <img src="./images/CFGHotel2.png" alt="" class="logo-image">
+          </a>
+        </div>
+        <div class="social-media-wrap">
+          <h4 class="footer-heading"> Follow us on our social media below to keep up with the latest offer packages and deals!</h4>
+          <div class="social-media">
+            <a href="#" class="sm-link"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="sm-link"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="sm-link"><i class="fab fa-facebook"></i></a>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="main.js"></script>
+</body>
+</html>

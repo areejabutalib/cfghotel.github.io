@@ -1,0 +1,683 @@
+/*Import the fonts used*/
+@import url('https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap');
+
+/*Basic reset*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Custom Properties */
+:root {
+    --dark-color: #2d2c2c;
+    --indigo-solid: #054A76;
+    --honolulu-transparent: rgba(18, 113, 168, 0.6);
+    --greenblue-transparent-alt:rgba(10, 136, 214, 0.5);
+    --lightblue-transparent-alt: rgba(105, 168, 197, 0.5);
+    --lightblue-light: #96ced3;
+    --blue-solid: #5d849b;
+    --gradient-color: linear-gradient(to right, var(--blue-solid), var(--lightblue-light));
+    --gradient-color-alt: linear-gradient(to right, var(--lightblue-light), var(--blue-solid));
+  }
+
+/* Reusable Styles */
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 1.5rem; /* 0 on the top and bottom, 1.5rem on the left and right */
+  margin: 0 auto; /* 0 top and bottom, auto left and right */
+}
+
+.btn{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: .5rem 3.5rem; /* top and bottom are .5, left and right is 3.5 */
+  border: none;
+  border-radius: 10rem;
+  display: inline-flex;
+  align-items: center;
+  transition: background-color, .5s;
+}
+
+.form-btn {
+  margin-top: 2.5rem;
+  cursor: pointer;
+}
+.btn-gradient {
+  background-image: var(--gradient-color);
+}
+
+.btn-gradient:hover {
+  background: rgba(47, 48, 97, 80%);
+}
+
+.btn-blue {
+  background-color: rgba(47, 48, 97, 80%);
+}
+
+.btn-blue:hover {
+  background-color: var(--lightblue-light);
+}
+
+.dots {
+  font-size: 2.4rem;
+  margin-left: .5rem;
+  opacity: .75;
+}
+
+/* Global Styles */
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: 5rem 0;
+}
+
+/* Header Styles */
+.header {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  position: fixed; /* this allows the banner to scroll down with the page */
+  top: 0;
+  left: 0;
+  background-color: var(--honolulu-transparent);
+  z-index: 999;
+}
+
+/* Header styles - nav */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  max-width: 15%;
+}
+
+.nav-list {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--indigo-solid);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1400;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity .5s;
+}
+
+.menu-open .nav-list {
+  opacity: 1;
+  transform: scale(1);
+} 
+
+.nav-item:not(:last-child) {
+  margin-bottom: .5rem;
+} 
+
+.nav-link {
+  display: block;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 1rem;
+  text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+}
+
+/* Hero section styles */
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("./images/Pool2.jpg") center no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 0;
+}
+
+.hero::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  background-color: var(--greenblue-transparent-alt);
+  z-index: -1;
+}
+
+.main-heading {
+  color: #fff;
+  line-height: 1;
+  text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+  margin-bottom: 2.5rem;
+}
+
+.title {
+  font-size: 4.8rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.subtitle{
+  padding: 1.3rem;
+  font-size: 3.6rem;
+  font-weight: 300;
+  font-family: 'Courgette', cursive;
+}
+
+/* Booking section styles */
+.booking {
+  background-image: var(--gradient-color);
+}
+
+/* .grid-container {
+  display: grid;
+  grid-template-rows: repeat();
+}
+
+
+.book-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.align-items-start {
+  align-items: flex-start!important;
+}
+
+.justify-content-start {
+  justify-content: flex-start!important;
+}
+
+.flex-column {
+  flex-direction: column!important;
+} */
+
+
+.input-group {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.input,
+.options {
+  outline: none;
+  border: none;
+  width: 100%;
+  min-height: 4rem; /* this way it will always be 4rem at minimum, and no smaller than that */
+  padding: 1rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: "Open Sans", sans-serif;
+  /* resize: none; reason for this is because later for the contact form, we will not be able to resize the text area for the message */
+}
+
+::placeholder {
+  color: inherit;
+}
+
+/************* Rooms section styles ************/
+.section-head {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.heading { 
+  display: block; /* span elements are inline by default */
+  font-size: 4rem;
+  text-transform: uppercase;
+}
+
+.sub-head {
+  font-size: 1.7rem;
+  font-family: 'Courgette', cursive;
+  font-weight: 300;
+  color: rgb(55, 111, 148);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 2.5rem;
+}
+
+
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-rooms {
+  height: 35rem;
+  color: #fff;
+  padding: 1rem; /* 1rem all around */
+  position: relative;
+}
+
+.featured-rooms::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightblue-transparent-alt);
+  z-index: -1; /* this is so the text comes forwards */
+}
+
+.room-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.room-name {
+  font-size: 2.6rem;
+  text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+}
+
+.room-price {
+  font-size: 1.8rem;
+  margin: 1rem  2.5rem;
+}
+
+.room-rating {
+  margin: 1rem 0 2.5rem;
+  text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+}
+
+.rating-color i:first-child {
+  color: #ffeb8d
+}
+
+.rating-color i:nth-child(2) {
+  color: #fed46b;
+}
+
+.rating-color i:nth-child(3) {
+  color: #fbb53d;
+}
+
+.rating-color i:nth-child(4) {
+  color: #fa9e1b;
+}
+
+.rating-color i:nth-child(5) {
+  color: #FAA307;
+}
+
+
+/******* Special offer section styles ********/
+.offer {
+  background: linear-gradient(to right, rgba(105, 168, 197, 0.8), rgba(0, 119, 182, .8)),
+  url("./images/Room3.jpg") bottom center no-repeat;
+  background-size: cover;
+}
+
+.offer-content {
+  background-color: #fff;
+  text-align: center;
+  padding: 5rem 1rem;
+  position: relative;
+  overflow: hidden; /* this will hide the outline border going over the frame */
+}
+
+.discount {
+  background-color:rgb(18, 113, 168);
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  text-transform: uppercase;
+  outline: 2px solid rgb(18, 113, 168);
+  outline-offset: .5rem;
+  color: #fff;
+}
+
+.paragraph {
+  color: #2b2d42;
+  margin-bottom: 2.5rem;
+}
+
+.room3 {
+  font-size: 2.6rem;
+  text-shadow: 1px 1px 1rem rgba(0,0,0,.5);
+  color: #2b2d42;
+}
+
+/************ Spa & Fitness section  **********/
+
+.fitness {
+  background-color: #f2f6f9;
+}
+
+.image-wrap {
+  position: relative;
+  height: 25rem;
+}
+
+.image-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--lightblue-transparent-alt);
+}
+
+.paragraph {
+  margin: 1rem 0;
+}
+
+.spa-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.spa-name {
+  font-size: 2.6rem;
+  background-color: var(--blue-solid);
+  color: #fff;
+  padding: .5rem 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 2.5rem;
+  z-index: 10;
+}
+
+.rooms-btn {
+  background-image: var(--gradient-color);
+}
+
+
+
+.rooms-btn:hover {
+  background: var(--blue-solid);
+}
+
+/********* Contact section *********/
+.contact {
+    background: linear-gradient(to right, rgba(20, 36, 44, 0.8), rgba(9, 50, 71, 0.8)),
+    url("./images/Pool3.jpg") bottom center no-repeat;
+    background-size: cover;
+}
+
+.contact .heading,
+.contact .sub-head {
+    color: #fff;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form {
+  width: 100%;
+  background-image: var(--gradient-color);
+  padding: 2.5rem;
+}
+
+.contact-form .input {
+  display: block;
+  background-color: transparent;
+  color: white;
+  font-weight: normal;
+  border-bottom: 2px solid white;
+  padding-left: 0;
+}
+
+.bar {
+  display: block;
+  position: relative;
+}
+
+.bar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #2f3e46;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .5s;
+}
+
+.contact-form .input:focus + .bar::after {
+  transform: scaleX(1);
+}
+
+/********* Footer/Contact section *********/
+
+.footer {
+  padding: 5rem 0;
+  background-color:#1f2a30;
+  color: #fff;
+}
+
+.footer-content-brand {
+  margin-bottom:  5rem;
+}
+
+.footer .paragraph {
+  color: inherit;
+}
+
+.footer-heading {
+  text-transform: uppercase;
+  margin: 2.5rem 0;
+}
+
+.social-media {
+  display: flex;
+}
+
+.sm-link {
+  width: 4rem;
+  height: 4rem;
+  font-size: 2rem;
+  border: 2px solid var(--lightblue-light);
+  border-radius: 50%;
+  display: flex;
+  margin-right: 1rem;
+  transition: background-color .5s;
+}
+
+.sm-link:hover {
+  background-color: var(--lightblue-light);
+  color: var(--dark-color);
+}
+
+.sm-link i {
+  margin: auto;
+}
+
+/******** Media Queries ********/
+@media screen and (min-width: 768px) {
+  /* Header section */
+  .header {
+    height: 10rem;
+  }
+  .header.active {
+    height: 6rem;
+  }
+  /* Hero section */
+  .title {
+    font-size: 8rem;
+  }
+  /* Contact section */
+  .contact-content {
+    justify-content: space-between;
+  }
+  .contact-form {
+    flex: 0 0 50%;
+    align-self: flex-start;
+  }
+  /* Footer section */
+  .footer {
+    overflow-x: hidden;
+  }
+  .footer-content {
+    display: flex;
+    /* justify-content: space-between; */
+  }
+  .footer-content-brand {
+    margin-bottom: 0;
+    flex: 0 0 60%;
+  }
+  .footer-heading {
+    margin-bottom: 5rem;
+  }
+  .social-media-wrap {
+    flex: 0 0 40%;
+    margin-left: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  section:not(.booking) {
+    padding: 10rem 0;
+  }
+}
+
+/* Header section */
+
+.hamburger-menu {
+  display: none;
+}
+.nav-list {
+  position: initial;
+  width: initial;
+  height: initial;
+  background-color: transparent; 
+  flex-direction: row;
+  justify-content: initial;
+  opacity: 1;
+  transform: scale(1);
+}
+.nav-item:not(:last-child) {
+  margin-right: 3rem;
+  margin-bottom: 0;
+}
+
+.nav-link {
+  font-size: 1.3rem;
+  font-weight: normal;
+  transition: color .5s;
+}
+
+.nav-link:hover {
+  color: #ff9f1c;
+}
+
+/* Hero section */
+.title {
+  font-size: 8rem;
+}
+.subtitle{
+  font-size: 4.6rem;
+}
+
+/* Booking section */
+ /* .book-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; 
+}
+
+.book-form .input-group {
+  margin-bottom: 0;
+}
+
+.book-form .input-group:first-child {
+  flex: 0 0 20%;
+}
+
+.input,
+.options {
+  min-width: 10rem;
+}  */
+
+/* iPhone X */
+
+@media only screen 
+    and (min-width : 375px) 
+    and (max-width : 812px) 
+    and (-webkit-device-pixel-ratio : 3) { 
+        .title {
+            font-size: 7rem;
+        }
+    }
+
+/* iPhone 8 */
+
+@media only screen 
+    and (min-width : 375px) 
+    and (max-width : 667px) 
+    and (-webkit-device-pixel-ratio : 2) { 
+        .title {
+            font-size: 7rem;
+        }
+    }
+
+/* iPhone 8 Plus */
+@media only screen 
+    and (min-width : 414px) 
+    and (max-width : 736px) 
+    and (-webkit-device-pixel-ratio : 3) {
+        .title {
+            font-size: 7rem;
+        }
+    }
